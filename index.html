@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/sandstone/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" type="image/png" href="images/icono.png" />
+    <title>Finanzas</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><b>Bienvenido a tus finanzas</b></a>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <form id="task-form">
+                                <div class="form-group">
+                                    <input type="text" id="task-title" class="form-control" placeholder="Titulo" autofocus="" autocomplete="off">
+                                </div>
+                                <div class="form-group">
+                                    <input type="number" id="task-amount" class="form-control" placeholder="Importe" autocomplete="off"></input>
+                                </div>
+                                <button class="btn btn-primary" id="btn-task-form">Guardar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card mt-2 mb-0 border-primary">
+                        <div class="card-header text-center">
+                          <b>Estadisticas</b>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">En positivo: <span class="positive"></span></li>
+                          <li class="list-group-item">En negativo: <span class="negative"></span></li>
+                          <li class="list-group-item">Total: <span class="total"></span></li>
+                          <button class="btn list-group-item m-0 p-2 btn-reload"><b>Refrescar</b></button>
+                        </ul>
+                    </div>
+                    <button type="button" class="btn btn-danger mt-2 w-100" id="btn-delete-all">Eliminar todos los registros</button>
+                </div>
+                <div class="col-md-6 mt-2" id="tasks-container">
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="scripts/firebase.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+</html>

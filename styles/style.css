@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(246, 246, 248);
+}
+
+.navbar{
+    background-color: #0d6efd;
+}
+
+.card-header{
+    background-color: #0d6efd;
+    color: white;
+}
+
+.reload{
+    background-color: #0d6efd;
+    color: white;
+}
